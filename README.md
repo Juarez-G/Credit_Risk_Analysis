@@ -15,7 +15,7 @@ Multiple methods were employed to train, test and fit the data to make better co
 
 * Oversampling RandomOverSampler Model: instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. 
 
-  ![Oversampling.png](Images/Oversampling.png)
+  ![Oversampling.png](Images/oversampling.png)
 
 * Balanced Random Forest Classifer :A balanced random forest randomly under-samples each boostrap sample to balance it.
 
