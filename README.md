@@ -13,27 +13,32 @@ Multiple methods were employed to train, test and fit the data to make better co
 
 ## Results
 
-* Oversampling RandomOverSampler Model
+* Oversampling RandomOverSampler Model: instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. 
 
   ![Oversampling.png](Images/Oversampling.png)
 
-* BalancedRandomForestClassifer
+* Balanced Random Forest Classifer :A balanced random forest randomly under-samples each boostrap sample to balance it.
 
   ![balancedros.png](Images/balancedros.png)
 
-* SMOTE (Synthetic Minority Oversampling Technique) Model
-![smote.png](Images/smote.png)
+* SMOTE (Synthetic Minority Oversampling Technique) Model :  like random oversampling, the size of the minority is increased. The key difference between the two lies in how the minority class is increased in size.
 
-* SMOTEENN algorithm (Synthetic Minority Oversampling Technique + Edited NearestNeighbors))
+  ![smote.png](Images/smote.png)
+
+* SMOTEENN algorithm (Synthetic Minority Oversampling Technique + Edited NearestNeighbors)): SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
+
+    1. Oversample the minority class with SMOTE.
+    2. Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
 
   ![smoteen.png](Images/smoteen.png)
 
-* Undersampling ClusterCentroids Model
-![undersampling.png](Images/undersampling.png)
+* Undersampling ClusterCentroids Model : Cluster centroid undersampling is akin to SMOTE. The algorithm identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.
 
-* Ensemble Classifiers
+  ![undersampling.png](Images/undersampling.png)
 
- ![balancedensemble.png](Images/balancedensemble.png)
+* Ensemble Classifiers : Ensemble learning is a way of generating various base classifiers from which a new classifier is derived which performs better than any constituent classifier .
+
+  ![balancedensemble.png](Images/balancedensemble.png)
 
 ## Summary
 After exploring all various methods and algorithms, I recommend the Ensemble Classifier as it had the highest accuracy rating for this particular dataset.  I would recommend that datasets be put through a few different models before deciding on what works for that particular dataset, as it may vary based on the information provided.
